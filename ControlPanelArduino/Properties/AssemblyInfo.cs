@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
 [assembly: AssemblyTitle("ControlPanelArduino")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Управление ESP 8266 подобными устройствами  https://fedoroffalexander.wixsite.com/smart")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Домашняя лаборатория")]
 [assembly: AssemblyProduct("ControlPanelArduino")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright ©  2019 Александр Федоров")]
+[assembly: AssemblyTrademark("AF")]
 [assembly: AssemblyCulture("")]
 
 // Установка значения False для параметра ComVisible делает типы в этой сборке невидимыми
