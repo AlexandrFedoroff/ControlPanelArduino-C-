@@ -55,6 +55,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
             this.checkBoxWrite = new System.Windows.Forms.CheckBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.radioButtonIl = new System.Windows.Forms.RadioButton();
@@ -142,7 +143,8 @@
             this.RxTxTimer = new System.Windows.Forms.Timer(this.components);
             this.DrawTimer = new System.Windows.Forms.Timer(this.components);
             this.Maintimer = new System.Windows.Forms.Timer(this.components);
-            this.label2 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -203,6 +205,8 @@
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.checkBox1);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.checkBoxWrite);
             this.tabPage1.Controls.Add(this.groupBox6);
@@ -236,12 +240,22 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Автополив";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label2.Location = new System.Drawing.Point(507, 641);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(202, 13);
+            this.label2.TabIndex = 78;
+            this.label2.Text = "Установить параметры на устройстве";
+            // 
             // checkBoxWrite
             // 
             this.checkBoxWrite.AutoSize = true;
             this.checkBoxWrite.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.checkBoxWrite.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkBoxWrite.Location = new System.Drawing.Point(483, 642);
+            this.checkBoxWrite.Location = new System.Drawing.Point(481, 642);
             this.checkBoxWrite.Name = "checkBoxWrite";
             this.checkBoxWrite.Size = new System.Drawing.Size(13, 12);
             this.checkBoxWrite.TabIndex = 77;
@@ -1325,15 +1339,27 @@
             // 
             this.Maintimer.Tick += new System.EventHandler(this.Maintimer_Tick);
             // 
-            // label2
+            // checkBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label2.Location = new System.Drawing.Point(507, 641);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(202, 13);
-            this.label2.TabIndex = 78;
-            this.label2.Text = "Установить параметры на устройстве";
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkBox1.Location = new System.Drawing.Point(21, 641);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(13, 12);
+            this.checkBox1.TabIndex = 79;
+            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label6.Location = new System.Drawing.Point(56, 640);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(135, 13);
+            this.label6.TabIndex = 80;
+            this.label6.Text = "Включить запись данных";
             // 
             // Form1
             // 
@@ -1490,6 +1516,8 @@
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
         private System.Windows.Forms.CheckBox checkBoxWrite;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
