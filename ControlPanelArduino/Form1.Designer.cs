@@ -55,6 +55,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.checkBoxWrite = new System.Windows.Forms.CheckBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -143,8 +145,7 @@
             this.RxTxTimer = new System.Windows.Forms.Timer(this.components);
             this.DrawTimer = new System.Windows.Forms.Timer(this.components);
             this.Maintimer = new System.Windows.Forms.Timer(this.components);
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -240,6 +241,30 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Автополив";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label6.Location = new System.Drawing.Point(56, 640);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(135, 13);
+            this.label6.TabIndex = 80;
+            this.label6.Text = "Включить запись данных";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkBox1.Location = new System.Drawing.Point(21, 641);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(13, 12);
+            this.checkBox1.TabIndex = 79;
+            this.toolTip1.SetToolTip(this.checkBox1, "Включить/Выключить запись данных в локальную SQL базу.\r\nЗапись данных производить" +
+        "ся в интервале одного месяца.\r\n");
+            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -259,6 +284,8 @@
             this.checkBoxWrite.Name = "checkBoxWrite";
             this.checkBoxWrite.Size = new System.Drawing.Size(13, 12);
             this.checkBoxWrite.TabIndex = 77;
+            this.toolTip1.SetToolTip(this.checkBoxWrite, "Включить/Выключить установку парамеров порогов срабатывания\r\nна удаленном устройс" +
+        "тве. Можно изменить параметры на удаленном устройстве.");
             this.checkBoxWrite.UseVisualStyleBackColor = false;
             this.checkBoxWrite.CheckedChanged += new System.EventHandler(this.checkBoxWrite_CheckedChanged);
             // 
@@ -372,6 +399,8 @@
             this.checkBoxEnable.Name = "checkBoxEnable";
             this.checkBoxEnable.Size = new System.Drawing.Size(13, 12);
             this.checkBoxEnable.TabIndex = 80;
+            this.toolTip1.SetToolTip(this.checkBoxEnable, "Включить/Выключить стрелки-закладки\r\nМожно использовать для визуального запоминан" +
+        "ия параметров");
             this.checkBoxEnable.UseVisualStyleBackColor = false;
             this.checkBoxEnable.CheckedChanged += new System.EventHandler(this.checkBoxEnable_CheckedChanged);
             // 
@@ -644,6 +673,7 @@
             this.chart1.Size = new System.Drawing.Size(269, 205);
             this.chart1.TabIndex = 7;
             this.chart1.Text = "chart1";
+            this.toolTip1.SetToolTip(this.chart1, "Клик кнопкой мыши приведет к запуску окна отчета");
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // pictureBox20
@@ -699,6 +729,7 @@
             this.textBox2.Size = new System.Drawing.Size(100, 13);
             this.textBox2.TabIndex = 57;
             this.textBox2.Text = "192.168.1.68";
+            this.toolTip1.SetToolTip(this.textBox2, "Введите IP адрес сетевого устройства\r\nв состоянии Отключено");
             // 
             // textBox1
             // 
@@ -708,6 +739,7 @@
             this.textBox1.Size = new System.Drawing.Size(49, 13);
             this.textBox1.TabIndex = 56;
             this.textBox1.Text = "2000";
+            this.toolTip1.SetToolTip(this.textBox1, "Введите номер порта сетевого устройства\r\nв состоянии Отключено");
             // 
             // label1
             // 
@@ -1069,6 +1101,7 @@
             this.radialGauge3.ShowGaugeValue = true;
             this.radialGauge3.Size = new System.Drawing.Size(240, 240);
             this.radialGauge3.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.radialGauge3, "Показание датчика освещения");
             // 
             // groupBox2
             // 
@@ -1189,6 +1222,7 @@
             this.radialGauge2.ShowGaugeValue = true;
             this.radialGauge2.Size = new System.Drawing.Size(240, 240);
             this.radialGauge2.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.radialGauge2, "Показания датчика температуры");
             // 
             // groupBox1
             // 
@@ -1308,6 +1342,7 @@
             this.radialGauge1.ShowGaugeValue = true;
             this.radialGauge1.Size = new System.Drawing.Size(240, 240);
             this.radialGauge1.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.radialGauge1, "Показания датчика влажности");
             // 
             // tabPage2
             // 
@@ -1338,28 +1373,6 @@
             // Maintimer
             // 
             this.Maintimer.Tick += new System.EventHandler(this.Maintimer_Tick);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkBox1.Location = new System.Drawing.Point(21, 641);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(13, 12);
-            this.checkBox1.TabIndex = 79;
-            this.checkBox1.UseVisualStyleBackColor = false;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label6.Location = new System.Drawing.Point(56, 640);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(135, 13);
-            this.label6.TabIndex = 80;
-            this.label6.Text = "Включить запись данных";
             // 
             // Form1
             // 
@@ -1518,6 +1531,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
